@@ -1,4 +1,4 @@
-package sgrep
+package main
 
 import (
 	"flag"
