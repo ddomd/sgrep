@@ -2,6 +2,12 @@
 <br>
 A simple multithreaded grep implementation using Go.
 
+## Installation:
+
+```bash
+go install github.com/ddomd/sgrep@latest
+```
+
 ### Usage:
 
 ```bash
