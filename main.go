@@ -9,15 +9,16 @@ import (
 
 func main() {
 	verbose := flag.Bool("v", false, "Display line number and file path")
-	regex := flag.Bool("r", false, "Use a regex to form a query")
+	regex   := flag.Bool("r", false, "Use a regex to form a query")
 	workers := flag.Int("w", 10, "Set the number of search workers, default: 10")
-	buffer := flag.Int("b", 100, "Set the buffer size, default: 100")
+	buffer  := flag.Int("b", 100, "Set the buffer size, default: 100")
+	
 	flag.Parse()
 
 	query, path := parseArgs(flag.Args())
 
 	options := search.NewSearchOptions(*regex, *verbose)
-	search := search.NewSearch(*buffer, *workers, options)
+	search  := search.NewSearch(*buffer, *workers, options)
 
 	search.Start(path, query)
 

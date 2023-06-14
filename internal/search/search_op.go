@@ -38,7 +38,6 @@ func (s *Search) gatherResults(query string) {
 				}
 
 				jobResults, err := utils.ScanFile(job.Path, query, s.Options.Regex)
-
 				if err != nil {
 					log.Fatal("Couldn't read file")
 				}
